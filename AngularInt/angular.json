@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "AngularInt": {
+      "i18n":{
+        "sourceLocale": "en-US",
+        "locales": {
+          "es-PR": "src/locale/messages.es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "es-PR"
+            ],
             "outputPath": "dist/angular-int",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -97,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "54d2bc20-71df-40c4-b826-967eee7d2c61"
   }
 }
